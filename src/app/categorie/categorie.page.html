@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+  	<ion-back-button defaultHref="home"></ion-back-button>
+	</ion-buttons>
+	<ion-title>Catégories</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+      <ion-item *ngFor="let item of items" (click)="onClickItem(item.id)">
+        <ion-thumbnail slot="start">
+       	 <ion-img [src]="item.image"></ion-img>
+        </ion-thumbnail>
+        <div>
+    	<h3>{{item.title}}</h3>
+  	</div>
+	</ion-item>
+  </ion-list>
+</ion-content>
